@@ -1,0 +1,17 @@
+layer {
+${BOTTOM}
+${TOP}
+${NAME}
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: ${OUTDIM}
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+  param{ lr_mult: 1 decay_mult: 0}
+  param{ lr_mult: 1 decay_mult: 0}
+}

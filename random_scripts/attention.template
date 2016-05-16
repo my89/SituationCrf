@@ -1,0 +1,11 @@
+layer {
+${BOTTOM1}
+${BOTTOM2}
+${TOP}
+${NAME}
+  type: "Attention"
+  attention_param{
+    args: ${ARGS}
+    map: ${MAP}
+  }
+}

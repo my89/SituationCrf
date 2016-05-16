@@ -1,0 +1,18 @@
+net: "of500_gpu_check2/network.prototxt"
+#test_iter: 400
+#test_iter: 1
+#test_interval: 3441
+iter_size : 1
+base_lr: 1e-6
+lr_policy: "step"
+gamma: 0.1
+stepsize: 100000
+display: 1
+average_loss: 100
+max_iter: 200000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 1000
+snapshot_prefix: "of500_gpu_check2/"
+solver_mode: GPU
+snapshot_format:HDF5

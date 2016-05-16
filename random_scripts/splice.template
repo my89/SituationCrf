@@ -1,0 +1,10 @@
+layer {
+  name: "slicer"
+  type: "Slice"
+  ${BOTTOM}
+  ${TOP}
+  slice_param {
+    axis: 1
+    ${SLICE}
+  }
+}

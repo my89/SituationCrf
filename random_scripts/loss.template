@@ -1,0 +1,58 @@
+layer{
+${BOTTOM}
+  name: "crf-log-loss"
+  top: "crf-log-loss"
+  top: "frame-structure"
+  top: "frame-score"
+  type: "MILFrameLoss"
+  frame_loss_param{
+    lambda : 0
+    references : 3
+    maxlabels : 7
+    structure : "of500/of500_structure.tab"
+    mode: 0
+    syns: "of500/object/object_value.tabs"
+    total_syns : 11789
+    bounding_boxes: 1
+  }
+}
+layer {
+  bottom: "label"
+  bottom: "frame-structure"
+  bottom: "frame-score"
+  top: "top1-verb-acc"
+  top: "top1-arg-acc"
+  top: "top1-any-acc"
+  top: "top1-full-acc"
+  top: "top1-*arg-acc"
+  top: "top1-*any-acc"
+  top: "top1-*full-acc"
+  name: "top1-evaluation"
+  type: "StructureFrameAccuracy"
+  structure_frame_accuracy_param{
+    references: 3
+    maxlabels: 7
+    topk: 1
+    total_verbs: 504
+  }
+}
+layer {
+  bottom: "label"
+  bottom: "frame-structure"
+  bottom: "frame-score"
+  top: "top5-verb-acc"
+  top: "top5-arg-acc"
+  top: "top5-any-acc"
+  top: "top5-full-acc"
+  top: "top5-*arg-acc"
+  top: "top5-*any-acc"
+  top: "top5-*full-acc"
+  name: "top5-evaluation"
+  type: "StructureFrameAccuracy"
+  structure_frame_accuracy_param{
+    references: 3
+    maxlabels: 7
+    topk: 5
+    total_verbs: 504
+  }
+}

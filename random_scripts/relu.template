@@ -1,0 +1,6 @@
+layer {
+${BOTTOM}
+${TOP}
+${NAME}
+  type: "ReLU"
+}

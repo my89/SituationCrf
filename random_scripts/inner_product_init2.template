@@ -1,0 +1,11 @@
+layer {
+${BOTTOM}
+${TOP}
+${NAME}
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: ${OUTDIM}
+  }
+  param{ lr_mult: 1 decay_mult: 0}
+  param{ lr_mult: 1 decay_mult: 0}
+}

@@ -1,0 +1,10 @@
+caffe/build/
+*.h5
+of500_crf_1024/nn.npy
+vgg/
+of500/OpenFrame500.tab
+of500/_webly/
+of500/bbs/
+of500/output_224/
+of500/resized_256/
+of500/webly/

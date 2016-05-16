@@ -1,0 +1,12 @@
+layer {
+  ${BOTTOM1}
+  ${BOTTOM2}
+  ${TOP}
+  ${NAME}
+  type: "Eltwise"
+  eltwise_param{  
+    coeff: 1
+    coeff: 1
+    operation: SUM
+  }
+}

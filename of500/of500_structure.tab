@@ -1,0 +1,504 @@
+adjusting	0	5	Item	0	293	Tool	1	92	Place	2	83	Feature	3	210	Agent	4	49
+admiring	1	3	Admired	0	249	Place	1	164	Agent	2	63
+ailing	2	4	Place	0	69	Cause	1	86	VictimPart	2	55	Victim	3	46
+aiming	3	4	Item	0	55	Place	1	73	Target	2	47	Agent	3	53
+applauding	4	3	Addressee	0	74	Place	1	104	Agent	2	85
+applying	5	5	Destination	0	146	Tool	1	82	Substance	2	125	Place	3	59	Agent	4	36
+apprehending	6	3	Place	0	70	Victim	1	54	Agent	2	43
+arching	7	3	BODYPART	0	33	Place	1	65	Agent	2	35
+arranging	8	4	Item	0	166	Tool	1	74	Place	2	104	Agent	3	37
+arresting	9	3	Place	0	44	Suspect	1	49	Agent	2	27
+ascending	10	2	Place	0	66	Agent	1	44
+asking	11	3	Addressee	0	70	Place	1	85	Agent	2	70
+assembling	12	5	Component	0	224	Tool	1	118	GoalItem	2	233	Place	3	73	Agent	4	50
+attaching	13	6	Tool	0	73	Destination	1	277	Agent	2	41	Item	3	292	Place	4	81	Glue	5	114
+attacking	14	4	Weapon	0	106	Place	1	96	Victim	2	128	Agent	3	105
+autographing	15	4	Item	0	74	Place	1	78	Agent	2	38	Receiver	3	28
+baking	16	5	Food	0	90	Place	1	32	FoodContainer	2	68	Agent	3	38	HeatSource	4	22
+ballooning	17	2	Place	0	39	Agent	1	19
+bandaging	18	3	Place	0	72	VICTIM	1	48	Agent	2	42
+baptizing	19	3	Place	0	34	BAPTIZED	1	31	Agent	2	29
+barbecuing	20	3	Food	0	48	Place	1	60	Agent	2	31
+bathing	21	5	CoAgent	0	36	Substance	1	25	Place	2	36	Tool	3	53	Agent	4	37
+begging	22	4	ITEM	0	40	Place	1	56	GIVER	2	30	Agent	3	57
+betting	23	2	Place	0	60	Agent	1	23
+biking	24	2	Place	0	66	Agent	1	32
+biting	25	3	Item	0	190	Place	1	93	Agent	2	93
+blocking	26	4	Blocker	0	78	Tool	1	75	Place	2	63	Blocked	3	84
+blossoming	27	2	Place	0	64	Agent	1	31
+boarding	28	3	Place	0	50	Agent	1	42	Vehicle	2	47
+boating	29	3	Place	0	15	Boaters	1	30	Vehicle	2	32
+bothering	30	3	Action	0	164	Victim	1	64	Agent	2	81
+bouncing	31	4	Item	0	65	Place	1	66	Surface	2	92	Agent	3	61
+bowing	32	2	Place	0	115	Agent	1	73
+braiding	33	3	Item	0	28	Place	1	25	Agent	2	20
+branching	34	2	Place	0	79	Brancher	1	94
+brawling	35	2	Place	0	84	Agent	1	50
+breaking	36	4	Item	0	113	Tool	1	72	Against	2	73	Agent	3	61
+brewing	37	3	Place	0	41	Target	1	31	Agent	2	32
+browsing	38	3	Place	0	57	GoalItem	1	92	Agent	2	21
+brushing	39	5	TOOL	0	28	Substance	1	43	Place	2	89	Target	3	164	Agent	4	50
+bubbling	40	2	Place	0	91	Agent	1	135
+buckling	41	5	Item	0	50	Fastener	1	19	Container	2	49	Place	3	30	Agent	4	37
+building	42	5	Place	0	55	Tool	1	115	GoalItem	2	133	Components	3	109	Agent	4	45
+bulldozing	43	3	Object	0	51	Place	1	49	Agent	2	14
+burning	44	3	Place	0	81	Target	1	166	Agent	2	50
+burying	45	5	Item	0	94	Tool	1	40	Destination	2	34	Place	3	48	Agent	4	44
+buttering	46	4	Item	0	65	Tool	1	42	Place	2	39	Agent	3	22
+butting	47	3	Place	0	71	Target	1	81	Agent	2	69
+buttoning	48	3	Item	0	47	Place	1	31	Agent	2	25
+buying	49	5	Goods	0	117	Place	1	66	Payment	2	25	Agent	3	35	Seller	4	29
+calling	50	3	Tool	0	11	Place	1	52	Agent	2	34
+calming	51	3	Place	0	66	Experiencer	1	25	Agent	2	43
+camouflaging	52	3	Place	0	50	HidingItem	1	56	Agent	2	86
+camping	53	3	Shelter	0	26	Place	1	54	Agent	2	37
+caressing	54	4	Place	0	79	RecipientPart	1	53	Recipient	2	64	Agent	3	43
+carrying	55	4	Item	0	214	Place	1	102	Agent	2	56	AgentPart	3	50
+carting	56	4	Item	0	162	Tool	1	62	Place	2	84	Agent	3	76
+carving	57	4	Tool	0	57	SUBSTANCE	1	78	Place	2	48	Agent	3	25
+catching	58	4	Tool	0	67	CaughtItem	1	96	Place	2	91	Agent	3	93
+celebrating	59	3	Occasion	0	118	Place	1	100	Agent	2	83
+chasing	60	3	Place	0	112	Chasee	1	156	Agent	2	118
+checking	61	5	Place	0	84	Tool	1	111	Patient	2	155	Aspect	3	167	Agent	4	43
+cheering	62	2	Place	0	76	Agent	1	38
+cheerleading	63	3	Supported	0	33	Place	1	50	Agent	2	14
+chewing	64	3	Item	0	179	Place	1	67	Agent	2	82
+chiseling	65	3	Item	0	69	Place	1	45	Agent	2	24
+chopping	66	4	Item	0	87	Tool	1	26	Place	2	42	Agent	3	22
+circling	67	3	Place	0	61	Center	1	86	Agent	2	94
+clapping	68	3	AgentPart	0	8	Place	1	79	Agent	2	72
+clawing	69	3	Place	0	80	Victim	1	155	Agent	2	59
+cleaning	70	4	Source	0	273	Tool	1	131	Place	2	160	Agent	3	81
+clearing	71	5	Item	0	91	Tool	1	90	Place	2	72	Agent	3	45	Source	4	108
+clenching	72	4	Item	0	35	Place	1	38	Agent	2	40	AgentPart	3	14
+climbing	73	4	Tool	0	54	Obstacle	1	64	Place	2	47	Agent	3	49
+clinging	74	3	ClungTo	0	155	Place	1	88	Agent	2	110
+clipping	75	5	Item	0	67	Tool	1	33	Place	2	60	Agent	3	26	Source	4	89
+coaching	76	4	Skill	0	73	Place	1	48	Student	2	46	Agent	3	25
+colliding	77	3	Item	0	99	Place	1	74	Agent	2	59
+coloring	78	4	Item	0	67	Tool	1	31	Place	2	45	Agent	3	24
+combing	79	4	Tool	0	19	Place	1	34	Target	2	19	Agent	3	17
+communicating	80	3	Place	0	99	Adressee	1	61	Agent	2	50
+commuting	81	3	Traveler	0	19	Place	1	43	Vehicle	2	24
+competing	82	3	Place	0	77	Competition	1	130	Agent	2	89
+complaining	83	3	Listener	0	74	Place	1	85	Agent	2	51
+confronting	84	3	Place	0	69	Confronted	1	73	Agent	2	62
+congregating	85	2	Individuals	0	99	Place	1	154
+constructing	86	5	Place	0	66	Tool	1	114	Components	2	103	CreatedItem	3	138	Agent	4	27
+cooking	87	6	Container	0	54	Food	1	104	Tool	2	56	Agent	3	44	Place	4	42	HeatSource	5	38
+coughing	88	2	Place	0	31	Agent	1	21
+counting	89	3	Place	0	70	ItemType	1	186	Agent	2	43
+covering	90	4	Item	0	135	Place	1	57	Cover	2	137	Agent	3	54
+crafting	91	4	Instrument	0	108	Place	1	37	Agent	2	28	Created	3	137
+cramming	92	4	Place	0	73	Theme	1	110	Container	2	82	Agent	3	50
+crashing	93	4	Item	0	30	Place	1	65	Against	2	95	Agent	3	58
+crawling	94	2	Place	0	100	Agent	1	56
+cresting	95	2	Place	0	47	Agent	1	64
+crouching	96	2	Place	0	156	Agent	1	73
+crowning	97	4	Place	0	33	Crown	1	27	CrownedEntity	2	27	Agent	3	20
+crushing	98	4	Place	0	74	Tool	1	127	CrushedItem	2	176	Agent	3	76
+crying	99	2	Place	0	75	Agent	1	30
+curling	100	4	Tool	0	39	Place	1	35	Target	2	27	Agent	3	32
+curtsying	101	2	Place	0	52	Agent	1	26
+dancing	102	2	Place	0	65	Agent	1	37
+decomposing	103	2	Place	0	66	Decomposer	1	100
+decorating	104	4	Item	0	135	Decorated	1	160	Place	2	56	Agent	3	34
+deflecting	105	4	Destination	0	66	Place	1	48	DeflectedItem	2	66	Agent	3	58
+descending	106	4	source	0	102	tool	1	86	Place	2	74	Agent	3	62
+destroying	107	4	DestroyedItem	0	177	Tool	1	106	Place	2	97	Agent	3	93
+detaining	108	3	Place	0	48	Victim	1	26	Agent	2	32
+dialing	109	3	Item	0	12	Place	1	36	Agent	2	24
+dining	110	3	Food	0	89	Place	1	54	Agent	2	25
+dipping	111	4	Item	0	206	Substance	1	122	Place	2	88	Agent	3	25
+disciplining	112	4	Tool	0	44	Place	1	41	Victim	2	29	Agent	3	26
+discussing	113	2	Place	0	98	Agents	1	71
+disembarking	114	3	Place	0	56	Agent	1	37	Vehicle	2	30
+displaying	115	4	Item	0	239	Place	1	116	Target	2	54	Agent	3	94
+dissecting	116	4	Item	0	120	Tool	1	42	Place	2	35	Agent	3	33
+distracting	117	3	Place	0	52	Victim	1	40	Agent	2	64
+distributing	118	5	Place	0	70	Tool	1	37	Distributed	2	152	Recipients	3	63	Agent	4	59
+diving	119	2	Place	0	35	Agent	1	31
+docking	120	4	Connector	0	48	Place	1	42	Agent	2	35	Vehicle	3	50
+dousing	121	4	Undergoer	0	89	Place	1	70	Liquid	2	22	Agent	3	51
+dragging	122	5	Item	0	199	Tool	1	95	Contact	2	151	Place	3	122	Agent	4	110
+drawing	123	4	Tool	0	45	Place	1	57	Reference	2	268	Agent	3	34
+drenching	124	5	DrenchedItem	0	131	Tool	1	100	Place	2	111	Liquid	3	41	Agent	4	112
+drinking	125	4	Place	0	115	Container	1	87	Liquid	2	57	Agent	3	66
+dripping	126	5	Source	0	211	Destination	1	120	Place	2	67	Fluid	3	82	Agent	4	166
+driving	127	3	Item	0	42	Place	1	51	Agent	2	31
+drooling	128	3	Place	0	51	End	1	71	Agent	2	47
+dropping	129	5	Item	0	165	Place	1	78	End	2	98	Agent	3	79	Start	4	85
+drumming	130	4	ITEM	0	28	Tool	1	17	Place	2	65	Agent	3	46
+drying	131	4	Item	0	102	Tool	1	73	Place	2	61	Agent	3	37
+ducking	132	3	Blow	0	119	Place	1	99	Agent	2	57
+dusting	133	4	Source	0	172	Tool	1	57	Place	2	56	Agent	3	33
+dyeing	134	4	Dye	0	42	Material	1	65	Place	2	47	Agent	3	34
+eating	135	5	Food	0	188	Place	1	74	Tool	2	27	Container	3	80	Agent	4	74
+educating	136	4	Place	0	38	Teacher	1	23	Student	2	33	Subject	3	91
+ejecting	137	5	Item	0	60	Destination	1	24	Place	2	35	Agent	3	66	Source	4	74
+embracing	138	3	Coagent	0	54	Place	1	77	Agent	2	43
+emerging	139	4	Source	0	69	Destination	1	53	Place	2	64	Agent	3	88
+emptying	140	6	Container	0	126	Tool	1	61	Destination	2	128	Agent	3	56	Item	4	159	Place	5	88
+encouraging	141	3	Place	0	86	Agent	1	42	Reciever	2	36
+erasing	142	4	Erased	0	64	Source	1	32	Place	2	18	Agent	3	23
+erupting	143	3	Substance	0	18	Place	1	23	Agent	2	19
+examining	144	4	Item	0	147	Tool	1	73	Place	2	42	Agent	3	46
+exercising	145	3	AgentPart	0	24	Place	1	46	Agent	2	18
+exterminating	146	3	Instrument	0	44	Place	1	89	Agent	2	9
+extinguishing	147	4	Item	0	109	Tool	1	26	Place	2	40	Agent	3	25
+falling	148	4	Source	0	127	Place	1	100	Goal	2	74	Agent	3	85
+farming	149	5	Item	0	88	Tool	1	90	Ground	2	61	Place	3	32	Farmer	4	46
+fastening	150	6	Tool	0	57	Destination	1	176	Agent	2	36	Connector	3	101	Item	4	215	Place	5	67
+feeding	151	5	Food	0	115	Source	1	94	Eater	2	121	Place	3	114	Agent	4	75
+fetching	152	5	Item	0	83	Destination	1	63	Place	2	60	Agent	3	47	Source	4	89
+filling	153	5	Item	0	134	Destination	1	148	Place	2	53	Agent	3	45	Source	4	108
+filming	154	4	Tool	0	15	Performer	1	114	Place	2	98	Agent	3	18
+fishing	155	4	SOURCE	0	28	Tool	1	22	Place	2	51	Agent	3	31
+fixing	156	5	Place	0	82	Tool	1	128	Object	2	237	ObjectPart	3	259	Agent	4	47
+flaming	157	2	Place	0	94	Agent	1	167
+flapping	158	3	BodyPart	0	31	Place	1	92	Agent	2	70
+flexing	159	4	AgentPart	0	25	Addressee	1	26	Place	2	53	Agent	3	29
+flicking	160	5	AgentPart	0	12	Place	1	40	Object	2	70	ObjectPart	3	37	Agent	4	27
+flinging	161	5	Item	0	114	Tool	1	22	Place	2	79	Goal	3	93	Agent	4	65
+flipping	162	4	Tool	0	57	Place	1	80	Agent	2	69	Flipped	3	60
+floating	163	4	Tool	0	80	Medium	1	19	Place	2	50	Agent	3	142
+flossing	164	3	CoAgent	0	11	Place	1	18	Agent	2	20
+folding	165	4	Cloth	0	104	Shape	1	82	Place	2	60	Agent	3	26
+foraging	166	3	Item	0	99	Place	1	90	Agent	2	126
+fording	167	3	Tool	0	58	Place	1	21	Agent	2	44
+frisking	168	3	Place	0	48	Victim	1	34	Agent	2	33
+frowning	169	2	Place	0	68	Agent	1	45
+frying	170	4	Food	0	103	Place	1	35	Container	2	28	Agent	3	25
+fueling	171	4	Place	0	37	Tool	1	22	Recipient	2	36	Agent	3	29
+gambling	172	3	Stake	0	15	Place	1	46	Agent	2	22
+gardening	173	3	Tool	0	64	Place	1	46	Agent	2	33
+gasping	174	2	Place	0	86	Agent	1	51
+gathering	175	2	Place	0	120	Gatherers	1	59
+giggling	176	3	Place	0	94	Target	1	89	Agent	2	60
+giving	177	4	Item	0	194	Place	1	107	Recipient	2	73	Agent	3	69
+glaring	178	3	Place	0	96	Perceiver	1	53	Agent	2	65
+glowing	179	2	Place	0	142	Agent	1	277
+gluing	180	5	Connector	0	29	Item	1	209	Place	2	52	Goal	3	165	Agent	4	28
+gnawing	181	3	Item	0	211	Place	1	96	Agent	2	92
+grieving	182	2	Place	0	52	Agent	1	34
+grilling	183	3	Food	0	56	Place	1	43	Agent	2	27
+grimacing	184	3	Place	0	116	Cause	1	219	Agent	2	77
+grinding	185	5	Item	0	160	Tool	1	69	Place	2	66	Surface	3	66	Agent	4	53
+grinning	186	2	Place	0	118	Agent	1	62
+guarding	187	4	Item	0	164	Weapon	1	49	Place	2	80	Agent	3	36
+handcuffing	188	3	Place	0	46	Victim	1	30	Agent	2	15
+hanging	189	4	Item	0	126	Scaffold	1	75	Place	2	56	Agent	3	44
+harvesting	190	5	HarvestedItem	0	86	Tool	1	45	Place	2	20	Agent	3	24	Ground	4	36
+hauling	191	4	Item	0	140	Tool	1	59	Carrier	2	47	Place	3	54
+heaving	192	4	HeavedItem	0	70	Tool	1	30	Place	2	51	Agent	3	27
+helping	193	4	Tool	0	106	Place	1	120	Agent	2	77	EntityHelped	3	73
+hiking	194	2	Place	0	63	Agent	1	26
+hitchhiking	195	2	Place	0	29	Agent	1	21
+hitting	196	5	Tool	0	77	Place	1	88	Victim	2	96	Agent	3	73	VictimPart	4	59
+hoeing	197	3	Place	0	38	Agent	1	31	Ground	2	32
+hoisting	198	5	Item	0	187	Tool	1	68	Place	2	137	Agent	3	71	Source	4	100
+hugging	199	4	AgentPart	0	22	Hugged	1	112	Place	2	113	Agent	3	79
+hunching	200	3	Place	0	106	Surface	1	165	Agent	2	73
+hunting	201	3	Hunted	0	93	Place	1	60	Agent	2	67
+hurling	202	5	Start	0	28	Place	1	40	Object	2	55	End	3	53	Agent	4	37
+igniting	203	4	Item	0	150	Tool	1	70	Place	2	58	Agent	3	34
+ignoring	204	3	Place	0	44	BoringThing	1	47	Agent	2	31
+imitating	205	3	Model	0	68	Place	1	80	Agent	2	47
+immersing	206	4	Item	0	85	Place	1	55	Liquid	2	19	Agent	3	58
+inflating	207	4	Tool	0	43	Object	1	46	Place	2	55	Agent	3	26
+injecting	208	5	Destination	0	118	Source	1	21	Substance	2	53	Place	3	40	Agent	4	42
+inserting	209	4	Place	0	70	Object	1	241	Container	2	236	Agent	3	36
+installing	210	5	Place	0	42	Tool	1	94	Destination	2	128	Component	3	220	Agent	4	21
+instructing	211	3	Place	0	83	Student	1	62	Agent	2	56
+intermingling	212	2	Place	0	164	Agents	1	70
+interrogating	213	4	Tool	0	67	Addressee	1	50	Place	2	43	Agent	3	44
+interviewing	214	3	Place	0	77	Interviewee	1	54	Agent	2	40
+jogging	215	2	Place	0	64	Agent	1	26
+juggling	216	3	Items	0	67	Place	1	68	Agent	2	31
+jumping	217	5	Destination	0	79	Source	1	87	Obstacle	2	75	Place	3	88	Agent	4	85
+kicking	218	4	Place	0	109	Victim	1	103	Agent	2	65	VictimPart	3	81
+kissing	219	5	AgentPart	0	12	CoAgent	1	63	Place	2	86	CoAgentPart	3	60	Agent	4	42
+kneading	220	3	Item	0	41	Place	1	38	Agent	2	24
+kneeling	221	3	Contact	0	75	Place	1	104	Agent	2	58
+knocking	222	3	Item	0	52	Place	1	46	Agent	2	44
+lacing	223	3	Item	0	83	Place	1	63	Agent	2	35
+landing	224	3	Destination	0	52	Place	1	45	Agent	2	46
+lapping	225	4	Food	0	31	Place	1	59	Container	2	72	Agent	3	73
+lathering	226	4	Destination	0	39	Substance	1	26	Place	2	32	Agent	3	19
+laughing	227	2	Place	0	102	Agent	1	71
+launching	228	5	Item	0	18	Destination	1	22	Place	2	28	Agent	3	35	Source	4	35
+leading	229	3	Follower	0	102	Place	1	89	Agent	2	90
+leaking	230	4	Destination	0	74	Source	1	96	Substance	2	40	Place	3	55
+leaning	231	4	Item	0	44	Place	1	101	Against	2	126	Agent	3	45
+leaping	232	5	Destination	0	66	Source	1	88	Obstacle	2	76	Place	3	73	Agent	4	110
+lecturing	233	3	Audience	0	37	Place	1	50	Agent	2	41
+licking	234	3	Item	0	211	Place	1	81	Agent	2	88
+lifting	235	5	Item	0	162	Place	1	91	End	2	69	Agent	3	63	Start	4	80
+lighting	236	4	Item	0	84	Tool	1	50	Place	2	55	Agent	3	35
+loading	237	5	Item	0	197	Tool	1	94	Destination	2	138	Place	3	88	Agent	4	63
+locking	238	4	Item	0	53	Tool	1	47	Place	2	46	Agent	3	21
+making	239	5	Component	0	246	Tool	1	151	GoalItem	2	213	Place	3	81	Agent	4	56
+manicuring	240	4	Item	0	13	Tool	1	60	Place	2	25	Agent	3	14
+marching	241	2	Place	0	49	Agent	1	43
+mashing	242	4	Item	0	114	Tool	1	68	Place	2	56	Agent	3	32
+massaging	243	4	CoAgent	0	41	Place	1	32	CoAgentPart	2	52	Agent	3	23
+measuring	244	5	Tool	0	119	Object	1	278	Place	2	78	Agent	3	52	Quantity	4	122
+mending	245	4	Item	0	197	Tool	1	133	Place	2	84	Agent	3	51
+microwaving	246	4	Food	0	95	Place	1	22	Container	2	45	Agent	3	24
+milking	247	5	Source	0	19	Tool	1	10	Destination	2	34	Place	3	34	Agent	4	33
+miming	248	3	Place	0	68	Imitation	1	278	Agent	2	43
+mining	249	4	Place	0	62	Tool	1	79	Resource	2	46	Agent	3	42
+misbehaving	250	2	Place	0	73	Agent	1	40
+moistening	251	4	Item	0	140	Place	1	65	Liquid	2	62	Agent	3	47
+moisturizing	252	4	Place	0	20	Tool	1	36	Moisturized	2	34	Agent	3	13
+molding	253	4	Place	0	31	Substance	1	64	GoalItem	2	114	Agent	3	31
+mopping	254	3	Place	0	68	Surface	1	20	Agent	2	26
+mourning	255	2	Place	0	68	Mourner	1	41
+mowing	256	4	Item	0	22	Tool	1	19	Place	2	28	Agent	3	24
+nagging	257	3	Place	0	28	NaggedPerson	1	28	Agent	2	29
+nailing	258	5	Item2	0	84	Tool	1	24	Item1	2	89	Place	3	42	Agent	4	25
+nipping	259	3	Item	0	145	Place	1	73	Agent	2	65
+nuzzling	260	3	Item	0	146	Place	1	93	Agent	2	136
+offering	261	4	Beneficiary	0	81	Item	1	166	Place	2	82	Agent	3	61
+officiating	262	3	Place	0	57	Event	1	51	Agent	2	44
+opening	263	4	Item	0	116	Tool	1	43	Place	2	64	Agent	3	28
+operating	264	4	Item	0	204	Tool	1	60	Place	2	113	Agent	3	62
+overflowing	265	3	Source	0	148	Place	1	86	Agent	2	139
+packaging	266	3	Item	0	153	Place	1	61	Agent	2	38
+packing	267	4	Item	0	145	Place	1	59	Container	2	54	Agent	3	41
+painting	268	4	Item	0	100	Tool	1	33	Place	2	43	Agent	3	28
+panhandling	269	3	Place	0	32	Target	1	26	Agent	2	20
+parachuting	270	4	Parachute	0	10	Destination	1	26	Place	2	21	Agent	3	26
+parading	271	2	Place	0	41	Agent	1	57
+pasting	272	5	Connector	0	41	Item	1	104	Object	2	81	Place	3	44	Agent	4	27
+patting	273	4	Item	0	164	Tool	1	22	Place	2	107	Agent	3	70
+pawing	274	4	AgentPart	0	17	PawedItem	1	153	Place	2	75	Agent	3	51
+paying	275	4	Good	0	84	Place	1	55	Agent	2	29	Seller	3	43
+pedaling	276	3	Place	0	65	Agent	1	26	Vehicle	2	22
+peeing	277	3	Place	0	77	Target	1	130	Agent	2	64
+peeling	278	4	Item	0	109	Tool	1	32	Place	2	30	Agent	3	21
+performing	279	5	Tool	0	45	Place	1	35	Event	2	49	Agent	3	55	Stage	4	22
+perspiring	280	2	Place	0	63	Agent	1	32
+phoning	281	3	Tool	0	9	Place	1	65	Agent	2	28
+photographing	282	4	Item	0	158	Tool	1	15	Place	2	90	Agent	3	28
+picking	283	4	Source	0	72	Place	1	43	Crop	2	100	Agent	3	39
+piloting	284	5	Start	0	23	Place	1	29	End	2	19	Agent	3	26	Vehicle	4	32
+pinching	285	4	Place	0	46	Object	1	100	ObjectPart	2	91	Agent	3	33
+pinning	286	4	Pinned	0	92	Destination	1	94	Place	2	65	Agent	3	39
+pitching	287	4	Tool	0	8	Place	1	17	Pitched	2	9	Agent	3	19
+placing	288	4	PlacedItem	0	315	Destination	1	251	Place	2	103	Agent	3	58
+planting	289	5	CoParticipant	0	16	Tool	1	22	Planted	2	48	Place	3	39	Agent	4	21
+plowing	290	3	Instrument	0	38	Place	1	37	Agent	2	22
+plummeting	291	4	Start	0	58	Destination	1	31	Place	2	53	Agent	3	54
+plunging	292	4	Place	0	73	Destination	1	53	Plunged	2	48	Agent	3	63
+poking	293	5	Place	0	83	Tool	1	72	Object	2	169	ObjectPart	3	111	Agent	4	45
+pooing	294	3	Destination	0	71	Place	1	60	Agent	2	68
+potting	295	4	Item	0	46	Place	1	42	Container	2	34	Agent	3	25
+pouncing	296	3	Destination	0	121	Place	1	73	Agent	2	75
+pouring	297	6	Substance	0	140	Tool	1	38	Destination	2	164	Agent	3	44	Source	4	110	Place	5	88
+pouting	298	2	Place	0	60	Agent	1	35
+practicing	299	4	Skill	0	193	Place	1	100	Tool	2	218	Agent	3	64
+praying	300	2	Place	0	61	Agent	1	44
+preaching	301	3	Addressee	0	31	Place	1	44	Agent	2	39
+pressing	302	3	Item	0	220	Place	1	96	Agent	2	43
+pricking	303	4	Pricked	0	71	Tool	1	68	Place	2	44	Agent	3	36
+protesting	304	2	Place	0	45	Agent	1	19
+providing	305	5	Item	0	187	Place	1	99	Recipient	2	72	Agent	3	84	Source	4	197
+prowling	306	3	Place	0	66	Target	1	15	Agent	2	54
+pruning	307	5	Source	0	40	RemovedItem	1	37	Place	2	29	Tool	3	30	Agent	4	21
+prying	308	5	Item	0	201	Tool	1	81	From	2	181	Place	3	64	Agent	4	26
+puckering	309	3	AgentPart	0	11	Place	1	49	Agent	2	35
+pulling	310	4	Item	0	203	Tool	1	92	Place	2	150	Agent	3	100
+pumping	311	6	Substance	0	35	Tool	1	30	Destination	2	62	Agent	3	32	Source	4	59	Place	5	44
+punching	312	4	BodyPart	0	28	Place	1	45	Victim	2	52	Agent	3	33
+punting	313	3	Item	0	11	Place	1	19	Agent	2	18
+pushing	314	4	Item	0	172	Place	1	157	Agent	2	75	AgentPart	3	52
+putting	315	4	Item	0	342	Destination	1	235	Place	2	109	Agent	3	73
+queuing	316	2	Place	0	110	Agent	1	41
+racing	317	2	Place	0	60	Agent	1	77
+rafting	318	2	Place	0	15	Agent	1	18
+raining	319	1	Place	0	100
+raking	320	5	Item	0	58	Destination	1	46	Place	2	56	Agent	3	31	Source	4	37
+ramming	321	4	Place	0	69	Victim	1	104	Agent	2	73	RammingItem	3	78
+reading	322	3	Item	0	68	Place	1	83	Agent	2	65
+rearing	323	2	Place	0	64	Agent	1	17
+reassuring	324	3	Reassured	0	50	Place	1	66	Agent	2	54
+recording	325	3	Place	0	52	Phenomenon	1	98	Agent	2	65
+recovering	326	3	Place	0	40	Ailment	1	59	Agent	2	41
+recuperating	327	2	Place	0	68	Agent	1	36
+rehabilitating	328	3	Item	0	70	Place	1	58	Agent	2	50
+releasing	329	3	ReleasedItem	0	72	Place	1	77	Agent	2	41
+repairing	330	5	Item	0	219	Problem	1	218	Place	2	78	Tool	3	158	Agent	4	42
+resting	331	4	Item	0	52	Place	1	98	Goal	2	159	Agent	3	92
+restraining	332	3	Place	0	83	Restrained	1	61	Agent	2	65
+retrieving	333	4	Start	0	72	Object	1	83	Place	2	53	Agent	3	26
+riding	334	3	Place	0	156	Agent	1	80	Vehicle	2	102
+rinsing	335	4	Tool	0	52	Object	1	173	Place	2	35	Agent	3	30
+rocking	336	4	Place	0	46	Container	1	31	Rocked	2	25	Agent	3	32
+rotting	337	3	Place	0	90	Container	1	140	Agent	2	170
+rowing	338	3	Place	0	23	Agent	1	20	Vehicle	2	21
+rubbing	339	4	Item	0	130	Place	1	59	Agent	2	53	AgentPart	3	57
+running	340	2	Place	0	78	Agent	1	38
+saluting	341	3	Place	0	54	Target	1	43	Agent	2	74
+saying	342	3	Place	0	97	Adressee	1	75	Agent	2	95
+scolding	343	3	Place	0	38	Victim	1	30	Agent	2	35
+scooping	344	5	Item	0	186	Tool	1	75	Place	2	97	Agent	3	35	Source	4	160
+scoring	345	2	Place	0	33	Agent	1	25
+scraping	346	4	ScrapedItem	0	174	Place	1	77	Tool	2	88	Agent	3	36
+scratching	347	4	Tool	0	43	Object	1	80	Place	2	46	Agent	3	65
+scrubbing	348	4	Item	0	166	Tool	1	78	Place	2	91	Agent	3	43
+sealing	349	4	Item	0	163	Place	1	51	Agent	2	32	Sealant	3	98
+selling	350	4	Buyer	0	35	Item	1	219	Place	2	78	Seller	3	58
+serving	351	4	Item	0	94	Place	1	78	Agent	2	51	Served	3	75
+sewing	352	4	Item	0	70	Tool	1	20	Place	2	41	Agent	3	29
+shaking	353	4	Item	0	42	Tool	1	16	Place	2	56	Agent	3	52
+sharpening	354	4	Item	0	63	Tool	1	48	Place	2	38	Agent	3	25
+shaving	355	6	Substance	0	11	CoAgent	1	26	Agent	2	26	Place	3	26	BodyPart	4	26	Tool	5	21
+shearing	356	4	Item	0	12	Place	1	50	Agent	2	28	Source	3	16
+shelling	357	3	Object	0	75	Place	1	59	Agent	2	30
+shelving	358	4	Item	0	116	Destination	1	35	Place	2	45	Agent	3	34
+shivering	359	2	Place	0	62	Agent	1	39
+shooting	360	4	Target	0	35	Firearm	1	31	Agent	2	39	Projectile	3	19
+shopping	361	3	Goods	0	168	Place	1	45	Agent	2	32
+shouting	362	3	Addressee	0	71	Place	1	76	Agent	2	70
+shoveling	363	4	Item	0	47	Place	1	82	Agent	2	41	Source	3	68
+shredding	364	4	Item	0	94	Tool	1	48	Place	2	48	Agent	3	29
+shrugging	365	2	Place	0	31	Agent	1	25
+shushing	366	3	Place	0	68	Target	1	33	Agent	2	51
+signaling	367	5	Place	0	95	Message	1	138	Recipient	2	68	Tool	3	49	Agent	4	65
+signing	368	4	Tool	0	16	Place	1	42	Agent	2	42	SignedItem	3	67
+singing	369	2	Place	0	51	Agent	1	40
+sitting	370	3	Contact	0	114	Place	1	105	Agent	2	62
+skating	371	3	Place	0	61	Agent	1	36	Vehicle	2	18
+sketching	372	5	Image	0	220	Material	1	47	Place	2	56	Tool	3	34	Agent	4	30
+skidding	373	2	Place	0	64	Agent	1	45
+skiing	374	2	Place	0	39	Agent	1	18
+skipping	375	3	Obstacle	0	29	Place	1	66	Agent	2	42
+slapping	376	5	Tool	0	10	Place	1	63	Victim	2	43	Agent	3	53	VictimPart	4	22
+sleeping	377	2	Place	0	125	Agent	1	66
+slicing	378	4	SlicedItem	0	109	Tool	1	23	Place	2	29	Agent	3	16
+sliding	379	5	Slider	0	64	Destination	1	59	Place	2	60	Surface	3	70	Agent	4	46
+slipping	380	3	Destination	0	46	Place	1	61	Agent	2	36
+slithering	381	2	Place	0	88	Agent	1	23
+slouching	382	3	Contact	0	58	Place	1	51	Agent	2	35
+smashing	383	5	Smashed	0	143	Tool	1	85	Place	2	85	Against	3	94	Agent	4	58
+smearing	384	5	Item	0	100	Tool	1	56	Place	2	64	Surface	3	117	Agent	4	31
+smelling	385	3	Item	0	176	Place	1	69	Agent	2	43
+smiling	386	2	Place	0	63	Agent	1	71
+sneezing	387	2	Place	0	33	Agent	1	18
+sniffing	388	3	Item	0	234	Place	1	95	Agent	2	83
+snowing	389	1	Place	0	86
+snuggling	390	3	CoAgent	0	76	Place	1	57	Agent	2	59
+soaking	391	5	Item	0	66	Place	1	46	Substance	2	34	Container	3	48	Agent	4	31
+soaring	392	2	Place	0	21	Agent	1	45
+socializing	393	3	CoAgent	0	51	Place	1	117	Agent	2	50
+sowing	394	3	Tool	0	31	Place	1	22	Agent	2	20
+spanking	395	4	Tool	0	33	Place	1	55	Victim	2	43	Agent	3	44
+speaking	396	3	CoAgent	0	54	Place	1	70	Agent	2	45
+spearing	397	3	Place	0	64	Victim	1	64	Agent	2	42
+spilling	398	5	Destination	0	98	Source	1	96	Substance	2	125	Place	3	46	Agent	4	56
+spinning	399	4	Tool	0	27	Material	1	29	Place	2	38	Agent	3	32
+spitting	400	4	Item	0	41	Place	1	61	Target	2	59	Agent	3	42
+splashing	401	5	Place	0	54	Tool	1	86	Destination	2	79	Substance	3	21	Agent	4	65
+spoiling	402	2	Place	0	65	Agent	1	71
+spraying	403	5	Destination	0	177	Source	1	59	Substance	2	81	Place	3	89	Agent	4	67
+spreading	404	5	Tool	0	43	Substance	1	84	Place	2	44	Surface	3	83	Agent	4	36
+sprinkling	405	5	Item	0	75	Destination	1	138	Place	2	57	Agent	3	41	Source	4	76
+sprinting	406	2	Place	0	51	Agent	1	25
+sprouting	407	2	Sprouter	0	42	Place	1	73
+spying	408	4	Tool	0	48	Place	1	64	Target	2	34	Agent	3	28
+squeezing	409	4	Item	0	105	Tool	1	17	Place	2	52	Agent	3	22
+squinting	410	3	Item	0	58	Place	1	76	Agent	2	52
+stacking	411	4	Top	0	119	Place	1	88	Agent	2	51	Bottom	3	143
+stampeding	412	2	Place	0	60	Agent	1	43
+standing	413	2	Place	0	140	Agent	1	69
+stapling	414	5	Item	0	85	Tool	1	7	Place	2	37	Surface	3	93	Agent	4	15
+staring	415	3	Item	0	170	Place	1	140	Agent	2	85
+steering	416	4	Tool	0	29	Place	1	49	Agent	2	34	Vehicle	3	40
+stinging	417	4	Place	0	23	Victim	1	35	Agent	2	28	VictimPart	3	39
+stirring	418	5	Item	0	95	Tool	1	45	Container	2	49	Place	3	45	Agent	4	31
+stitching	419	4	Tool	0	35	Place	1	27	Fastener	2	25	Agent	3	24
+stooping	420	2	Place	0	157	Agent	1	76
+storming	421	1	Place	0	78
+strapping	422	5	Strapped	0	111	Destination	1	107	Place	2	73	Agent	3	59	Strap	4	59
+stretching	423	3	Item	0	61	Place	1	60	Agent	2	59
+striking	424	5	AgentPart	0	75	CoAgent	1	74	Place	2	54	Tool	3	47	Agent	4	41
+stripping	425	5	Source	0	132	RemovedItem	1	124	Place	2	75	Tool	3	95	Agent	4	47
+stroking	426	4	Object	0	84	Place	1	80	Part	2	64	Agent	3	34
+studying	427	2	Place	0	61	Agent	1	32
+stuffing	428	4	Item	0	178	Destination	1	117	Place	2	104	Agent	3	51
+stumbling	429	3	Destination	0	70	Place	1	95	Agent	2	60
+subduing	430	3	Place	0	82	Target	1	61	Agent	2	42
+submerging	431	4	Place	0	45	Object	1	86	Substance	2	7	Agent	3	78
+sucking	432	3	Item	0	67	Place	1	64	Agent	2	52
+surfing	433	4	Path	0	18	Tool	1	17	Place	2	19	Agent	3	15
+swarming	434	2	AgentType	0	42	Place	1	108
+sweeping	435	4	Place	0	74	Surface	1	59	Agent	2	43	Brush	3	21
+swimming	436	2	Place	0	21	Agent	1	61
+swinging	437	3	Carrier	0	57	Place	1	63	Agent	2	47
+swooping	438	2	Place	0	77	Agent	1	40
+tackling	439	3	Place	0	35	Victim	1	35	Agent	2	26
+talking	440	3	Listener	0	93	Place	1	88	Agent	2	77
+taping	441	4	Item	0	136	Destination	1	113	Place	2	45	Agent	3	33
+tasting	442	4	Item	0	115	Tool	1	50	Place	2	54	Agent	3	29
+tattooing	443	4	Tool	0	19	Place	1	25	Target	2	46	Agent	3	21
+taxiing	444	3	Place	0	16	Agent	1	17	Ground	2	15
+teaching	445	3	Place	0	63	Teacher	1	50	Student	2	48
+tearing	446	4	Item	0	115	Tool	1	40	Place	2	48	Agent	3	45
+telephoning	447	2	Place	0	63	Agent	1	37
+throwing	448	4	Item	0	153	Destination	1	125	Place	2	149	Agent	3	92
+tickling	449	4	Tickled	0	59	Object	1	26	Place	2	80	Agent	3	55
+tilling	450	3	Tool	0	42	Place	1	36	Agent	2	28
+tilting	451	4	Item	0	106	Place	1	110	Agent	2	99	AgentPart	3	55
+tipping	452	4	Item	0	104	Place	1	87	Agent	2	82	AgentPart	3	97
+towing	453	3	Item	0	59	Place	1	42	Agent	2	33
+training	454	3	Place	0	81	Student	1	79	Agent	2	72
+trimming	455	5	Item	0	127	Tool	1	53	Place	2	54	ItemPart	3	94	Agent	4	42
+tripping	456	3	Item	0	116	Place	1	99	Agent	2	62
+tugging	457	3	Item	0	132	Place	1	113	Agent	2	77
+tuning	458	4	Tool	0	52	Object	1	59	Place	2	33	Agent	3	30
+turning	459	3	Place	0	92	TurnedItem	1	70	Agent	2	62
+twirling	460	3	CoAgent	0	104	Place	1	80	Agent	2	39
+twisting	461	3	AgentPart	0	57	Place	1	61	Agent	2	23
+tying	462	5	Connector	0	53	Item	1	115	Destination	2	91	Place	3	72	Agent	4	38
+typing	463	3	Tool	0	22	Place	1	36	Agent	2	35
+uncorking	464	4	Place	0	31	Tool	1	33	Container	2	11	Agent	3	21
+unloading	465	5	Item	0	187	Tool	1	92	Place	2	89	Agent	3	71	Source	4	107
+unlocking	466	5	Lock	0	31	Tool	1	39	Container	2	43	Place	3	43	Agent	4	26
+unpacking	467	4	Item	0	109	Place	1	48	Container	2	39	Agent	3	31
+unplugging	468	3	Place	0	40	Unplugged	1	56	Agent	2	11
+unveiling	469	3	Object	0	86	Place	1	55	Agent	2	23
+urinating	470	3	Place	0	72	Target	1	111	Agent	2	55
+vacuuming	471	4	Tool	0	9	Place	1	60	Surface	2	96	Agent	3	34
+vaulting	472	6	End	0	29	Tool	1	21	Agent	2	32	Start	3	30	Obstacle	4	54	Place	5	45
+videotaping	473	3	Depicted	0	135	Place	1	100	Agent	2	34
+voting	474	2	Place	0	35	Agent	1	26
+waddling	475	2	Place	0	72	Agent	1	36
+wading	476	3	Substance	0	22	Place	1	60	Agent	2	67
+wagging	477	4	AgentPart	0	11	Addressee	1	40	Place	2	59	Agent	3	33
+waiting	478	2	Place	0	110	Agent	1	36
+walking	479	2	Place	0	89	Agent	1	52
+washing	480	5	Item	0	142	Tool	1	79	Place	2	74	Agent	3	54	Dirt	4	36
+watering	481	4	Place	0	45	Tool	1	31	Recipient	2	65	Agent	3	33
+waving	482	3	Agentpart	0	25	Place	1	134	Agent	2	84
+waxing	483	4	CoAgent	0	20	BodyPart	1	25	Place	2	22	Agent	3	13
+weeding	484	3	Tool	0	40	Place	1	46	Agent	2	27
+weeping	485	2	Place	0	76	Agent	1	45
+weighing	486	4	Place	0	60	Tool	1	15	Mass	2	115	Agent	3	38
+welding	487	5	Item	0	29	Tool	1	16	Place	2	31	Surface	3	54	Agent	4	22
+wetting	488	5	Tool	0	103	Object	1	158	Place	2	85	Liquid	3	29	Agent	4	56
+wheeling	489	4	Item	0	127	Carrier	1	71	Place	2	88	Agent	3	57
+whipping	490	4	Item	0	49	Tool	1	25	Place	2	59	Agent	3	37
+whirling	491	2	Place	0	66	Agent	1	54
+whisking	492	4	Item	0	54	Place	1	24	Container	2	24	Agent	3	34
+whistling	493	3	Tool	0	20	Place	1	46	Agent	2	38
+wilting	494	2	Place	0	45	Agent	1	50
+winking	495	3	Addressee	0	23	Place	1	50	Agent	2	45
+wiping	496	5	Source	0	89	Tool	1	45	Substance	2	72	Place	3	49	Agent	4	46
+working	497	3	Place	0	82	Focus	1	207	Agent	2	59
+wrapping	498	4	WrappedItem	0	133	Place	1	48	WrappingItem	2	100	Agent	3	32
+wringing	499	3	Item	0	66	Place	1	60	Agent	2	26
+wrinkling	500	3	AgentPart	0	16	Place	1	32	Agent	2	32
+writing	501	4	Tool	0	22	Place	1	30	Target	2	55	Agent	3	23
+yanking	502	4	Place	0	80	Yanked	1	118	Agent	2	62	YankedPart	3	114
+yawning	503	2	Place	0	91	Agent	1	88

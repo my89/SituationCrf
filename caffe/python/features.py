@@ -4,6 +4,8 @@ classify.py is an out-of-the-box image classifer callable from the command line.
 
 By default it configures and runs the Caffe reference ImageNet model.
 """
+import matplotlib
+matplotlib.use('Agg')
 import numpy as np
 import os
 import sys
@@ -18,14 +20,13 @@ def main(argv):
     pycaffe_dir = os.path.dirname(__file__)
 
     parser = argparse.ArgumentParser()
-    print "here"
     # Required arguments: input and output files.
     parser.add_argument(
-        "input_file",
+        "--input_file",
         help="Input image, directory, or npy."
     )
     parser.add_argument(
-        "output_file",
+        "--output_file",
         help="Output npy filename."
     )
     # Optional arguments.

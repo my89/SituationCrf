@@ -3,9 +3,6 @@
 #endif
 #include <glog/logging.h>
 #include <stdio.h>
-#include <sys/ioctl.h>
-#include <sys/mman.h>
-#include <sys/stat.h>
 
 #include <sstream>
 #include <string>
@@ -86,12 +83,12 @@ GPUParams<Dtype>::GPUParams(shared_ptr<Solver<Dtype> > root_solver, int device)
   // Allocate device buffers
   CUDA_CHECK(cudaSetDevice(device));
   CUDA_CHECK(cudaMalloc(&data_, size_ * sizeof(Dtype)));
-  LOG(INFO) << device << " EXTRA" << size_ * sizeof(Dtype);
+
   // Copy blob values
   const vector<Blob<Dtype>*>& net =
       root_solver->net()->learnable_params();
   apply_buffers(net, data_, size_, copy);
-  LOG(INFO) << device << " EXTRA " << size_ * sizeof(Dtype);
+
   CUDA_CHECK(cudaMalloc(&diff_, size_ * sizeof(Dtype)));
   caffe_gpu_set(size_, Dtype(0), diff_);
 
@@ -296,7 +293,7 @@ void P2PSync<Dtype>::on_start() {
 #else
 //  CHECK(false);
 #endif
-  LOG(INFO) << "START";
+
   // Wait for update from parent
   if (parent_) {
     P2PSync<Dtype> *parent = queue_.pop();
@@ -321,7 +318,6 @@ void P2PSync<Dtype>::on_start() {
     CUDA_CHECK(cudaStreamSynchronize(cudaStreamDefault));
     children_[i]->queue_.push(this);
   }
-  LOG(INFO) << "START";
 #endif
 }
 
@@ -329,7 +325,6 @@ template<typename Dtype>
 void P2PSync<Dtype>::on_gradients_ready() {
 #ifndef CPU_ONLY
 #ifdef DEBUG
-  LOG(INFO) << "SYNCHING";
   int device;
   CUDA_CHECK(cudaGetDevice(&device));
   CHECK(device == solver_->param().device_id());
@@ -385,7 +380,8 @@ void P2PSync<Dtype>::on_gradients_ready() {
 }
 
 template<typename Dtype>
-void P2PSync<Dtype>::run(const vector<int>& gpus) {
+void P2PSync<Dtype>::Prepare(const vector<int>& gpus,
+            vector<shared_ptr<P2PSync<Dtype> > >* syncs) {
   // Pair devices for map-reduce synchronization
   vector<DevicePair> pairs;
   DevicePair::compute(gpus, &pairs);
@@ -396,15 +392,14 @@ void P2PSync<Dtype>::run(const vector<int>& gpus) {
   LOG(INFO)<< "GPUs pairs " << s.str();
 
   SolverParameter param(solver_->param());
-  vector<shared_ptr<P2PSync<Dtype> > > syncs(gpus.size());
 
   // Build the GPU tree by finding the parent for each solver
   for (int attempts = 0; attempts < pairs.size(); ++attempts) {
     for (int i = 1; i < pairs.size(); ++i) {
-      if (!syncs[i].get()) {
+      if (!syncs->at(i).get()) {
         P2PSync<Dtype>* parent = NULL;
-        for (int j = 0; j < syncs.size(); ++j) {
-          P2PSync<Dtype>* sync = j == 0 ? this : syncs[j].get();
+        for (int j = 0; j < syncs->size(); ++j) {
+          P2PSync<Dtype>* sync = j == 0 ? this : syncs->at(j).get();
           if (sync) {
             const SolverParameter& p = sync->solver()->param();
             if (p.device_id() == pairs[i].parent()) {
@@ -414,12 +409,18 @@ void P2PSync<Dtype>::run(const vector<int>& gpus) {
         }
         if (parent) {
           param.set_device_id(pairs[i].device());
-          syncs[i].reset(new P2PSync<Dtype>(solver_, parent, param));
-          parent->children_.push_back((P2PSync<Dtype>*) syncs[i].get());
+          syncs->at(i).reset(new P2PSync<Dtype>(solver_, parent, param));
+          parent->children_.push_back((P2PSync<Dtype>*) syncs->at(i).get());
         }
       }
     }
   }
+}
+
+template<typename Dtype>
+void P2PSync<Dtype>::Run(const vector<int>& gpus) {
+  vector<shared_ptr<P2PSync<Dtype> > > syncs(gpus.size());
+  Prepare(gpus, &syncs);
 
   LOG(INFO)<< "Starting Optimization";
 

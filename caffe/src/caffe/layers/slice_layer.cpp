@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "caffe/common_layers.hpp"
+#include "caffe/layers/slice_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
 namespace caffe {
@@ -21,7 +21,6 @@ void SliceLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
 template <typename Dtype>
 void SliceLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
       const vector<Blob<Dtype>*>& top) {
-  LOG(INFO) <<  "!" << bottom[0]->shape(0)  << " " << bottom[0]->shape(1); //<< " " << bottom[0]->shape(2) << " " << bottom[0]->shape(3);
   const int num_axes = bottom[0]->num_axes();
   const SliceParameter& slice_param = this->layer_param_.slice_param();
   if (slice_param.has_slice_dim()) {

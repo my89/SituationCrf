@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Situation Recognition : Visual Semantic Role Lableling">
-    <meta name="author" content="Mark Yatskar">
+    <meta name="description" content="Caffe demos">
+    <meta name="author" content="BVLC (http://bvlc.eecs.berkeley.edu/)">
 
-    <title>imSitu</title>
+    <title>Caffe Demos</title>
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -49,30 +49,69 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1><a href="/">imSitu</a></h1>
+        <h1><a href="/">Caffe Demos</a></h1>
+        <p>
+          The <a href="http://caffe.berkeleyvision.org">Caffe</a> neural network library makes implementing state-of-the-art computer vision systems easy.
+        </p>
       </div>
-      <h4> Recognize Situations </h4>
-      <div class="container-fluid">
-        <div class="row-fluid">
-          <div class="col-sm-12" style="text-align:center">This demo used the imSitu dataset to train a neural CRF to predict situations, as described in this <a href="http://homes.cs.washington.edu/~my89/publications/situations.pdf">paper</a>.</br>Try these examples... </div>
-        </div>
-        <div class="row-fluid">
-          <div class="col-sm-12" style="text-align:center">&nbsp; </div>
-        </div>
-         <div class="row-fluid">
-          <div class="col-sm-offset-2 col-sm-2" style="text-align:center"><a href="/classify_url?imageurl=http://s3.amazonaws.com/my89-frame-annotation/public/example/brushing.jpg"><img width="100px" height="100px" src="https://s3.amazonaws.com/my89-frame-annotation/public/example/brushing.jpg"></a></div>
- 	  <div class="col-sm-2" style="text-align:center"><a href="/classify_url?imageurl=http://s3.amazonaws.com/my89-frame-annotation/public/example/clinging.jpg"><img width="100px" height="100px"  src="https://s3.amazonaws.com/my89-frame-annotation/public/example/clinging.jpg"></a></div>
- 	  <div class="col-sm-2" style="text-align:center"><a href="/classify_url?imageurl=http://s3.amazonaws.com/my89-frame-annotation/public/example/falling.jpg"><img width="100px" height="100px"  src="https://s3.amazonaws.com/my89-frame-annotation/public/example/falling.jpg"></a></div>
-	  <div class="col-sm-2" style="text-align:center"><a href="/classify_url?imageurl=http://s3.amazonaws.com/my89-frame-annotation/public/example/feeding.jpg"><img width="100px" height="100px"  src="https://s3.amazonaws.com/my89-frame-annotation/public/example/feeding.jpg"></a></div>
-        </div>
-         <div class="row-fluid">
-          <div class="col-sm-12" style="text-align:center">&nbsp; </div>
+
+      <div>
+        <h2>Classification</h2>
+        <a href="/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg">Click for a Quick Example</a>
+      </div>
+
+      {% if has_result %}
+      {% if not result[0] %}
+      <!-- we have error in the result. -->
+      <div class="alert alert-danger">{{ result[1] }} Did you provide a valid URL or a valid image file? </div>
+      {% else %}
+      <div class="media">
+        <a class="pull-left" href="#"><img class="media-object" width="192" height="192" src={{ imagesrc }}></a>
+        <div class="media-body">
+          <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#infopred" data-toggle="tab">Maximally accurate</a></li>
+              <li><a href="#flatpred" data-toggle="tab">Maximally specific</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade in active" id="infopred">
+                <ul class="list-group">
+                  {% for single_pred in result[2] %}
+                  <li class="list-group-item">
+                  <span class="badge">{{ single_pred[1] }}</span>
+                  <h4 class="list-group-item-heading">
+                    <a href="https://www.google.com/#q={{ single_pred[0] }}" target="_blank">{{ single_pred[0] }}</a>
+                  </h4>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="flatpred">
+                <ul class="list-group">
+                  {% for single_pred in result[1] %}
+                  <li class="list-group-item">
+                  <span class="badge">{{ single_pred[1] }}</span>
+                  <h4 class="list-group-item-heading">
+                    <a href="https://www.google.com/#q={{ single_pred[0] }}" target="_blank">{{ single_pred[0] }}</a>
+                  </h4>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+      <p> CNN took {{ result[3] }} seconds. </p>
+      {% endif %}
+      <hr>
+      {% endif %}
+
       <form role="form" action="classify_url" method="get">
         <div class="form-group">
           <div class="input-group">
-            <input type="text" class="form-control" name="imageurl" id="imageurl" placeholder="Provide an image URL to recognize">
+            <input type="text" class="form-control" name="imageurl" id="imageurl" placeholder="Provide an image URL">
             <span class="input-group-btn">
               <input class="btn btn-primary" value="Classify URL" type="submit" id="classifyurl"></input>
             </span>
@@ -82,73 +121,17 @@
 
       <form id="formupload" class="form-inline" role="form" action="classify_upload" method="post" enctype="multipart/form-data">
         <div class="form-group">
-          <label for="imagefile">Or upload an image to recognize:</label>
+          <label for="imagefile">Or upload an image:</label>
           <input type="file" name="imagefile" id="imagefile">
         </div>
         <!--<input type="submit" class="btn btn-primary" value="Classify File" id="classifyfile"></input>-->
       </form>
-
-      {% if has_result %}
-      {% if not result[0] %}
-      <!-- we have error in the result. -->
-      <div class="alert alert-danger">{{ result[1] }} Did you provide a valid URL or a valid image file? </div>
-      {% else %}
-      <hr> 
-      <div class="container-fluid media">
-	<div class="row-fluid">
-	  <div class="col-sm-3">
-            <div class="row-fluid">
-              <div class="col-sm-12"><img class="img-responsive" src={{ imagesrc }}></div>
-       	    </div>
-            <div class="row-fluid">
-	      <div class="col-sm-12">&nbsp;</div>
-	    </div>
- 	    <div class="row-fluid">
-	      <div class="col-sm-12" style="text-align:center">Was image in the imSitu train set?</br><u>Similar images from train</u></div>
- 	    </div>
-            <div class="row-fluid center-block">
-		{% for single_pred in result[2] %}
-		{% if loop.index0 < 4 %}  
-		<div class="row-fluid"><div class="col-sm-offset-2 col-sm-8"><img class="img-responsive" src= {{ single_pred[4] }}></img></div></div>
-		{% endif %}
-		{% endfor %}
-            </div>
-           </div>
-	  <div class="col-sm-9">
-                  <ul class="list-group" style="text-align: center">
-                  {% for single_pred in result[2] %}
-                  <li class="list-group-item">
-		  <span class="pull-right"> {{single_pred[3]}} </span>
-		  <table class="table-responsive" width=85% border=1>
-		  <tr>
-		    <td colspan={{single_pred[1]|length}} style="background-color:#8AD2E7">{{ single_pred[0] }}</td>
-		  </tr>		  
-		  <tr>
-                    {% for v in single_pred[1] %}
-		      <td style="background-color:#EEE;"> {{ v[0] }} </td>
-                    {% endfor %}
-		  </tr>
-		  <tr>
-                    {% for v in single_pred[1] %}
-		       <td> {{ v[1] }} </td>
-                    {% endfor %}
-		  </tr>
-                  </table>
-                  </li>
-                   {% endfor %}
-                </ul>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-      <hr>
-      {% endif %}
-
-          </div>
+    </div>
 
     <hr>
     <div id="footer">
       <div class="container">
+        <p>&copy; BVLC 2014</p>
       </div>
    </div>
  </body>

@@ -39,7 +39,7 @@ DataTransformer<Dtype>::DataTransformer(const TransformationParameter& param,
 }
 
 template<typename Dtype>
-bool DataTransformer<Dtype>::Transform(const Datum& datum,
+void DataTransformer<Dtype>::Transform(const Datum& datum,
                                        Dtype* transformed_data) {
   const string& data = datum.data();
   const int datum_channels = datum.channels();
@@ -124,12 +124,11 @@ bool DataTransformer<Dtype>::Transform(const Datum& datum,
       }
     }
   }
-  return do_mirror;
 }
 
 
 template<typename Dtype>
-bool DataTransformer<Dtype>::Transform(const Datum& datum,
+void DataTransformer<Dtype>::Transform(const Datum& datum,
                                        Blob<Dtype>* transformed_blob) {
   // If datum is encoded, decoded and transform the cv::image.
   if (datum.encoded()) {
@@ -144,7 +143,7 @@ bool DataTransformer<Dtype>::Transform(const Datum& datum,
       cv_img = DecodeDatumToCVMatNative(datum);
     }
     // Transform the cv::image into blob.
-    return Transform(cv_img, transformed_blob);
+    Transform(cv_img, transformed_blob);
 #else
     LOG(FATAL) << "Encoded datum requires OpenCV; compile with USE_OPENCV.";
 #endif  // USE_OPENCV

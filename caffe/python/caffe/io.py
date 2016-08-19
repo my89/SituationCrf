@@ -46,7 +46,7 @@ def array_to_blobproto(arr, diff=None):
     return blob
 
 
-def arraylist_to_blobprotovecor_str(arraylist):
+def arraylist_to_blobprotovector_str(arraylist):
     """Converts a list of arrays to a serialized blobprotovec, which could be
     then passed to a network for processing.
     """
@@ -63,7 +63,7 @@ def blobprotovector_str_to_arraylist(str):
     return [blobproto_to_array(blob) for blob in vec.blobs]
 
 
-def array_to_datum(arr, label=0):
+def array_to_datum(arr, label=None):
     """Converts a 3-dimensional array to datum. If the array has dtype uint8,
     the output data will be encoded as a string. Otherwise, the output data
     will be stored in float format.
@@ -76,7 +76,8 @@ def array_to_datum(arr, label=0):
         datum.data = arr.tostring()
     else:
         datum.float_data.extend(arr.flat)
-    datum.label = label
+    if label is not None:
+        datum.label = label
     return datum
 
 
@@ -146,19 +147,15 @@ class Transformer:
         mean = self.mean.get(in_)
         input_scale = self.input_scale.get(in_)
         in_dims = self.inputs[in_][2:]
-        #print(in_dims)
         if caffe_in.shape[:2] != in_dims:
-	    print "resize"
             caffe_in = resize_image(caffe_in, in_dims)
         if transpose is not None:
             caffe_in = caffe_in.transpose(transpose)
         if channel_swap is not None:
-            print "swapping"
             caffe_in = caffe_in[channel_swap, :, :]
         if raw_scale is not None:
             caffe_in *= raw_scale
         if mean is not None:
-	    print "mean"
             caffe_in -= mean
         if input_scale is not None:
             caffe_in *= input_scale
@@ -182,9 +179,9 @@ class Transformer:
         if raw_scale is not None:
             decaf_in /= raw_scale
         if channel_swap is not None:
-            decaf_in = decaf_in[channel_swap, :, :]
+            decaf_in = decaf_in[np.argsort(channel_swap), :, :]
         if transpose is not None:
-            decaf_in = decaf_in.transpose([transpose[t] for t in transpose])
+            decaf_in = decaf_in.transpose(np.argsort(transpose))
         return decaf_in
 
     def set_transpose(self, in_, order):
@@ -296,8 +293,7 @@ def load_image(filename, color=True):
         of size (H x W x 3) in RGB or
         of size (H x W x 1) in grayscale.
     """
-    print str(filename)
-    img = skimage.img_as_float(skimage.io.imread(filename)).astype(np.float32)
+    img = skimage.img_as_float(skimage.io.imread(filename, as_grey=not color)).astype(np.float32)
     if img.ndim == 2:
         img = img[:, :, np.newaxis]
         if color:

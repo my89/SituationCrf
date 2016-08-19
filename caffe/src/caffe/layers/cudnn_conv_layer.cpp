@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "caffe/vision_layers.hpp"
+#include "caffe/layers/cudnn_conv_layer.hpp"
 
 namespace caffe {
 
@@ -39,9 +39,9 @@ void CuDNNConvolutionLayer<Dtype>::LayerSetUp(
 
   for (size_t i = 0; i < bottom.size(); ++i) {
     // initialize all to default algorithms
-    fwd_algo_[i] = (cudnnConvolutionFwdAlgo_t)0;
-    bwd_filter_algo_[i] = (cudnnConvolutionBwdFilterAlgo_t)0;
-    bwd_data_algo_[i] = (cudnnConvolutionBwdDataAlgo_t)0;
+    fwd_algo_[i] = (cudnnConvolutionFwdAlgo_t)0;//0;
+    bwd_filter_algo_[i] = (cudnnConvolutionBwdFilterAlgo_t)0;//0;
+    bwd_data_algo_[i] = (cudnnConvolutionBwdDataAlgo_t)0;//0;
     // default algorithms don't require workspace
     workspace_fwd_sizes_[i] = 0;
     workspace_bwd_data_sizes_[i] = 0;
@@ -191,7 +191,7 @@ void CuDNNConvolutionLayer<Dtype>::Reshape(
 
   // this is the total amount of storage needed over all groups + streams
   if (total_max_workspace > workspaceSizeInBytes) {
-    LOG(INFO) << "Reallocating workspace storage: " << total_max_workspace;
+    DLOG(INFO) << "Reallocating workspace storage: " << total_max_workspace;
     workspaceSizeInBytes = total_max_workspace;
 
     // free the existing workspace and allocate a new (larger) one

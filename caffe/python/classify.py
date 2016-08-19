@@ -18,7 +18,6 @@ def main(argv):
     pycaffe_dir = os.path.dirname(__file__)
 
     parser = argparse.ArgumentParser()
-    print "here"
     # Required arguments: input and output files.
     parser.add_argument(
         "input_file",
@@ -136,4 +135,4 @@ def main(argv):
 
 
 if __name__ == '__main__':
-   main(sys.argv)
+    main(sys.argv)

@@ -109,7 +109,6 @@ class ImagenetClassifier(object):
         'bet_file': (
             '{}/data/ilsvrc12/imagenet.bet.pickle'.format(REPO_DIRNAME)),
     }
-    print(default_args)
     for key, val in default_args.iteritems():
         if not os.path.exists(val):
             raise Exception(

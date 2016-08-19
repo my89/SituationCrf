@@ -1,4 +1,4 @@
-#include "caffe/loss_layers.hpp"
+#include "caffe/layers/mil_frame_loss_layer.hpp"
 #include "assert.h"
 
 namespace caffe {

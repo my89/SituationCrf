@@ -408,8 +408,13 @@ message LayerParameter {
   optional StructureFrameAccuracyParameter structure_frame_accuracy_param = 1002;
   optional ROIPoolingParameter roi_pooling_param = 1003;
   optional SelectiveProductParameter selective_product_param = 1004;
+  optional ParameterParameter2 parameter_param2 = 1005;
 }
-
+message ParameterParameter2 {
+  required uint32 d = 1 ;
+  required uint32 n = 2;
+  optional FillerParameter weight_filler = 3;
+}
 message SelectiveProductParameter{
   optional uint32 dim = 1 [default = 300];
   optional bool bias = 2 [default = true];

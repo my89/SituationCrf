@@ -184,7 +184,10 @@ Dtype MILFrameLossLayer<Dtype>::log_sum_exp(int length, int offset, int incremen
 template <typename Dtype>
 void MILFrameLossLayer<Dtype>::Forward_cpu(
     const vector<Blob<Dtype>*>& bottom, const vector<Blob<Dtype>*>& top) { 
-
+  
+  CHECK(false) <<  "CPU MODE FOR THE CRF IS CURRENTLY NOT SUPPORTED";
+  LOG(INFO) << "running cpu mode";
+ 
   Dtype* norms = this->norms.mutable_cpu_data();
   Dtype* arg_marginal = this->arg_marginal.mutable_cpu_data();
   Dtype* verb_marginal = this->verb_marginal.mutable_cpu_data();

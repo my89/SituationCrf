@@ -5883,8 +5883,7 @@ layer {
   name: "top5-evaluation"
   type: "StructureFrameAccuracy"
   structure_frame_accuracy_param{
-    mode:1
-    outfile: "out.txt"
+    mode:0
     references: 3
     maxlabels: 7
     topk: 5

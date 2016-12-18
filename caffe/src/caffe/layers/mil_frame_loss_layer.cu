@@ -11,6 +11,9 @@ __device__ Dtype gpu_log_sum_exp(int length, int offset, int increment, const Dt
   Dtype total = 0.;
   Dtype max = data[kmin];
 
+  //a strange no-op that makes the code well behaved on K40. I assume this is a compiler bug... -Mark
+  if(length == -1) printf(".");
+
   for(int k = kmin+increment; k < kmax; k+=increment){
     if (data[k] > max ) max = data[k];
   }
